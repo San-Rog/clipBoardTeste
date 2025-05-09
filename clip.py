@@ -1,3 +1,10 @@
-import pyperclip
+import streamlit.components.v1 as components
 
-pyperclip.copy("Este texto foi copiado para a área de transferência.")
+text = 'masmsmsmsmsm'
+
+js_code = f"""
+<script>
+    navigator.clipboard.writeText({text});
+</script>
+"""
+components.html(js_code)

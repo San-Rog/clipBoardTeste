@@ -1,10 +1,14 @@
 import streamlit.components.v1 as components
 
-text = 'masmsmsmsmsm'
+text = 'Meu carro de ouro'
+codeJs = f"""
+const htmlContent = {text};
+navigator.clipboard.writeText(htmlContent);
+"""
 
-js_code = f"""
+jsHtml = f"""
 <script>
-    navigator.clipboard.writeText({text});
+    {codeJs};
 </script>
 """
-components.html(js_code)
+components.html(jsHtml)
